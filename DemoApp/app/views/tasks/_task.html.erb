@@ -1,5 +1,5 @@
 <%= form_for [@project, Task.new], remote: true do |f| %>
-  <%= f.check_box :complete, :onclick => 'myFunction()' %>
+  <%= f.check_box :complete %>
   <%= task.name %>
   <%= link_to "(remove)", [@project, task], method: :delete, data: {confirm: "Are you sure?"} %>
 <% end %>

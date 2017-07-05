@@ -14,7 +14,9 @@
 //= require turbolinks
 
 function myFunction(){
-  $('document').on 'click', 'input[type=checkbox].edit_task', ->
-    $(this).parent('form').submit()
+ $('.edit_task input[type=submit]').remove();
+    $('.edit_task input[type=checkbox]').click(function() {
+        $(this).parent('form').submit();
+    });
 
 }

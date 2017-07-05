@@ -1,0 +1,4 @@
+<%= form_for [@project, Task.new], remote: true do |f| %>
+  <%= f.check_box :complete %>
+  <%= task.name %>
+<% end %>

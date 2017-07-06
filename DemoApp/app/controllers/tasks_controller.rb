@@ -38,7 +38,7 @@ class TasksController < ApplicationController
   # PATCH/PUT /tasks/1.json
   def update
     @task = Task.find(params[:id])
-    @task.update_attributes!(allowed_params)
+    @task.update_attributes!(task_params)
     respond_to do |format|
       if @task.update(task_params)
         format.html { redirect_to @project, notice: 'Task was successfully updated.' }

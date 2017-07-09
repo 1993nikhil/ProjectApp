@@ -16,11 +16,6 @@
 //= require jquery_ujs
 
 
-function myfunction(){
-
-    alert("Hello! I am an alert box!!");
-   
-}
 
 
 

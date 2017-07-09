@@ -1,34 +1,21 @@
-<p id="notice"><%= notice %></p>
+<h1><%= @project.name %></h1>
 
-<p>
-  <strong>Name:</strong>
-  <%= @project.name %>
-</p>
+<div id="project">
+  <%= form_for [@project, Task.new] do |f| %>
+    <%= f.hidden_field :project_id %>
+    <%= f.text_field :name %>
+    <%= f.submit %>
+  <% end %>
 
-<% if @project.tasks.size > 0 %>
-  <h2>Incomplete Tasks</h2>	
+  <h2>Incomplete Tasks</h2>
   <div class="tasks" id="incomplete_tasks">
-  <% for task in @project.tasks %>
-    <% if task.complete == false %>  
-      <h3><%= render task %></h3>
-    <% end%>
-  <% end %>
+    <%= render @project.incomplete_tasks %>
   </div>
 
-  <h2>Complete Tasks</h2>
+  <h2>Comlpete Tasks</h2>
   <div class="tasks" id="complete_tasks">
-  <% for task in @project.tasks %>
-    <% if task.complete == true %>  
-        <h3><%= render task %></h3>
-    <% end%>
-  <% end %>
+    <%= render @project.complete_tasks %>
   </div>
-<% end %>
 
-<h2>New Task</h2>
-<%= form_for [@project, Task.new] do |f| %>
-  <p><%= f.label :name %> <%= f.text_field :name %></p>
-  <p></= f.submit %></p>
-<% end %> 
-  
-<%= link_to 'Back', projects_path %>
+  <p><%= link_to "Back to Projects", projects_path %></p>
+</div>

@@ -7327,3 +7327,2991 @@ Processing by ProjectsController#show as HTML
 Completed 200 OK in 134ms (Views: 117.4ms | ActiveRecord: 2.3ms)
 
 
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-06 18:11:00 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (8.3ms)
+  Rendered tasks/_task.html.erb (0.5ms)
+  Rendered tasks/_task.html.erb (0.4ms)
+  Rendered projects/show.html.erb within layouts/application (42.4ms)
+Completed 200 OK in 265ms (Views: 242.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-06 23:52:52 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 1909ms (Views: 1877.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-06 23:52:54 +0530
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-06 23:52:56 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (13.2ms)
+  Rendered tasks/_task.html.erb (1.3ms)
+  Rendered tasks/_task.html.erb (1.3ms)
+  Rendered projects/show.html.erb within layouts/application (100.5ms)
+Completed 200 OK in 150ms (Views: 132.0ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-06 23:52:59 +0530
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "commit"=>"Update", "project_id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 13ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank):
+  
+app/controllers/tasks_controller.rb:29:in `create'
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-06 23:53:02 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (2.4ms)
+  Rendered tasks/_task.html.erb (1.2ms)
+  Rendered tasks/_task.html.erb (1.6ms)
+  Rendered projects/show.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 72ms (Views: 68.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-06 23:53:03 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (3.3ms)
+  Rendered tasks/_task.html.erb (2.0ms)
+  Rendered tasks/_task.html.erb (1.4ms)
+  Rendered projects/show.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 71ms (Views: 66.7ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-06 23:53:05 +0530
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "commit"=>"Update", "project_id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 11ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank):
+  
+app/controllers/tasks_controller.rb:29:in `create'
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-06 23:53:06 +0530
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "commit"=>"Update", "project_id"=>"7"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 8ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank):
+  
+app/controllers/tasks_controller.rb:29:in `create'
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-06 23:53:07 +0530
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "commit"=>"Update", "project_id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 5ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank):
+  
+app/controllers/tasks_controller.rb:29:in `create'
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-06 23:53:07 +0530
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "commit"=>"Update", "project_id"=>"7"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 7ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank):
+  
+app/controllers/tasks_controller.rb:29:in `create'
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-06 23:53:09 +0530
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "commit"=>"Update", "project_id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 7ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank):
+  
+app/controllers/tasks_controller.rb:29:in `create'
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-06 23:53:12 +0530
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"0"}, "commit"=>"Update", "project_id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 8ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank):
+  
+app/controllers/tasks_controller.rb:29:in `create'
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-06 23:53:13 +0530
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "commit"=>"Update", "project_id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 5ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank):
+  
+app/controllers/tasks_controller.rb:29:in `create'
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-06 23:53:14 +0530
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"0"}, "commit"=>"Update", "project_id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 7ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank):
+  
+app/controllers/tasks_controller.rb:29:in `create'
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-06 23:53:15 +0530
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "commit"=>"Update", "project_id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 9ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank):
+  
+app/controllers/tasks_controller.rb:29:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 00:05:31 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 291ms (Views: 275.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 00:05:33 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (12.1ms)
+  Rendered tasks/_task.html.erb (1.0ms)
+  Rendered tasks/_task.html.erb (1.0ms)
+  Rendered projects/show.html.erb within layouts/application (70.4ms)
+Completed 200 OK in 108ms (Views: 96.5ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 00:05:38 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GhlJoOj+iQCi8SubcPopA50D0iRiV3IAWT26oGZnvTNP/G5oDtWp4xRiwC7hD/BruCxiuotLhNmoJn6vducUQg==", "task"=>{"complete"=>"1"}, "commit"=>"Update", "project_id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 15ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank):
+  
+app/controllers/tasks_controller.rb:29:in `create'
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 00:07:14 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (178.6ms)
+  Rendered projects/show.html.erb within layouts/application (229.2ms)
+Completed 500 Internal Server Error in 264ms (ActiveRecord: 3.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_task_path' for #<#<Class:0x007f127891c328>:0x007f1278917828>
+Did you mean?  edit_project_task_path):
+    1: <%= form_for [@project, Task.new] do |f| %>
+    2:   <%= f.check_box :complete %>  
+    3:   <%= link_to 'Edit', edit_task_path(@task) %> |
+    4:   <%= task.name %>
+    5:   <%= link_to "(remove)", [@project, task], method: :delete, data: {confirm: "Are you sure?"} %>
+    6: <% end %>
+  
+app/views/tasks/_task.html.erb:3:in `block in _app_views_tasks__task_html_erb___4491013247620858167_69858658238140'
+app/views/tasks/_task.html.erb:1:in `_app_views_tasks__task_html_erb___4491013247620858167_69858658238140'
+app/views/projects/show.html.erb:13:in `block in _app_views_projects_show_html_erb___2606645704230886928_69858654480620'
+app/views/projects/show.html.erb:11:in `_app_views_projects_show_html_erb___2606645704230886928_69858654480620'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 00:08:04 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 293ms (Views: 271.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 00:08:06 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (10.1ms)
+  Rendered projects/show.html.erb within layouts/application (47.1ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"tasks", :id=>"7"}, missing required keys: [:project_id]):
+    1: <%= form_for [@project, Task.new] do |f| %>
+    2:   <%= f.check_box :complete %>  
+    3:   <%= link_to 'Edit', edit_project_task_path %> |
+    4:   <%= task.name %>
+    5:   <%= link_to "(remove)", [@project, task], method: :delete, data: {confirm: "Are you sure?"} %>
+    6: <% end %>
+  
+app/views/tasks/_task.html.erb:3:in `block in _app_views_tasks__task_html_erb___4177770424794776638_70123059710200'
+app/views/tasks/_task.html.erb:1:in `_app_views_tasks__task_html_erb___4177770424794776638_70123059710200'
+app/views/projects/show.html.erb:13:in `block in _app_views_projects_show_html_erb___4091433334264834211_70123065450760'
+app/views/projects/show.html.erb:11:in `_app_views_projects_show_html_erb___4091433334264834211_70123065450760'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 00:10:38 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (16.5ms)
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 00:10:39 +0530
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 105ms (Views: 102.2ms | ActiveRecord: 1.0ms)
+
+
+Completed 200 OK in 372ms (Views: 351.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 00:10:41 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (18.5ms)
+  Rendered tasks/_task.html.erb (2.1ms)
+  Rendered tasks/_task.html.erb (2.4ms)
+  Rendered projects/show.html.erb within layouts/application (115.2ms)
+Completed 200 OK in 175ms (Views: 165.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/projects/7/tasks/45/edit" for 127.0.0.1 at 2017-07-07 00:10:43 +0530
+Processing by TasksController#edit as HTML
+  Parameters: {"project_id"=>"7", "id"=>"45"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (277.2ms)
+  Rendered tasks/edit.html.erb within layouts/application (279.8ms)
+Completed 500 Internal Server Error in 291ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `task_path' for #<#<Class:0x007fd9b84e0c48>:0x007fd9b854cfd8>
+Did you mean?  asset_path):
+    1: <%= form_with(model: task, local: true) do |form| %>
+    2:   <% if task.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
+  
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__1388943694802157398_70286538631700'
+app/views/tasks/edit.html.erb:3:in `_app_views_tasks_edit_html_erb__4459084059394854052_70286538379040'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 00:13:00 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (10.6ms)
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 00:13:01 +0530
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 289ms (Views: 271.2ms | ActiveRecord: 1.1ms)
+
+
+Completed 200 OK in 46ms (Views: 43.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 00:13:03 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (14.9ms)
+  Rendered tasks/_task.html.erb (1.6ms)
+  Rendered tasks/_task.html.erb (1.5ms)
+  Rendered projects/show.html.erb within layouts/application (96.7ms)
+Completed 200 OK in 171ms (Views: 162.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/projects/7/tasks/45/edit" for 127.0.0.1 at 2017-07-07 00:13:05 +0530
+Processing by TasksController#edit as HTML
+  Parameters: {"project_id"=>"7", "id"=>"45"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (199.8ms)
+  Rendered tasks/edit.html.erb within layouts/application (202.1ms)
+Completed 500 Internal Server Error in 211ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `task_path' for #<#<Class:0x007f78d40de838>:0x007f78d4155ac8>
+Did you mean?  asset_path):
+    1: <%= form_with(model: task, local: true) do |form| %>
+    2:   <% if task.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
+  
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__1065816767726672545_70078465831080'
+app/views/tasks/edit.html.erb:3:in `_app_views_tasks_edit_html_erb__2343735106617893926_70078465244920'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 00:14:10 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 253ms (Views: 236.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 00:14:12 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (12.3ms)
+  Rendered tasks/_task.html.erb (1.3ms)
+  Rendered tasks/_task.html.erb (1.3ms)
+  Rendered projects/show.html.erb within layouts/application (85.1ms)
+Completed 200 OK in 137ms (Views: 126.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/projects/7/tasks/45/edit" for 127.0.0.1 at 2017-07-07 00:14:15 +0530
+Processing by TasksController#edit as HTML
+  Parameters: {"project_id"=>"7", "id"=>"45"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (301.1ms)
+  Rendered tasks/edit.html.erb within layouts/application (316.4ms)
+Completed 500 Internal Server Error in 326ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `task_path' for #<#<Class:0x000000039c4f98>:0x0000000394e7a8>
+Did you mean?  asset_path):
+    1: <%= form_with(model: task, local: true) do |form| %>
+    2:   <% if task.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
+  
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb___3803615059844684762_30772780'
+app/views/tasks/edit.html.erb:3:in `_app_views_tasks_edit_html_erb___3912973381553456969_30292320'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 00:15:57 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 338ms (Views: 321.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 00:15:59 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (10.2ms)
+  Rendered tasks/_task.html.erb (2.9ms)
+  Rendered tasks/_task.html.erb (0.9ms)
+  Rendered projects/show.html.erb within layouts/application (63.4ms)
+Completed 200 OK in 101ms (Views: 90.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/projects/7/tasks/45/edit" for 127.0.0.1 at 2017-07-07 00:16:00 +0530
+Processing by TasksController#edit as HTML
+  Parameters: {"project_id"=>"7", "id"=>"45"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (274.9ms)
+  Rendered tasks/edit.html.erb within layouts/application (277.3ms)
+Completed 500 Internal Server Error in 288ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `tasks_path' for #<#<Class:0x00000002e27550>:0x00000003547b00>
+Did you mean?  asset_path):
+    1:   <%= form_for [@project, Task.new] do |form| %>
+    2:   <% if task.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
+  
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__1644963684602508294_28356840'
+app/views/tasks/edit.html.erb:3:in `_app_views_tasks_edit_html_erb__1037486051677277535_24270800'
+Started GET "/projects/" for 127.0.0.1 at 2017-07-07 00:19:45 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 319ms (Views: 297.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 00:19:47 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (345.1ms)
+  Rendered projects/show.html.erb within layouts/application (386.1ms)
+Completed 500 Internal Server Error in 397ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `onclick' for #<#<Class:0x007fdbc497b1a0>:0x007fdbc4e23108>):
+    1: <%= form_for [@project, Task.new] do |f| %>
+    2:   <%= f.check_box :complete, onclick => "this.f.submit()" %>  
+    3:   <%= f.submit "update" %> |
+    4:   <%= task.name %>
+    5:   <%= link_to "(remove)", [@project, task], method: :delete, data: {confirm: "Are you sure?"} %>
+  
+app/views/tasks/_task.html.erb:2:in `block in _app_views_tasks__task_html_erb___774193113910064867_70290933582560'
+app/views/tasks/_task.html.erb:1:in `_app_views_tasks__task_html_erb___774193113910064867_70290933582560'
+app/views/projects/show.html.erb:13:in `block in _app_views_projects_show_html_erb__1150303097659946603_70290938921180'
+app/views/projects/show.html.erb:11:in `_app_views_projects_show_html_erb__1150303097659946603_70290938921180'
+Started GET "/projects/" for 127.0.0.1 at 2017-07-07 00:20:16 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 278ms (Views: 259.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 00:20:18 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (451.6ms)
+  Rendered projects/show.html.erb within layouts/application (508.5ms)
+Completed 500 Internal Server Error in 520ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `onclick' for #<#<Class:0x007f9244975698>:0x007f924455fe00>):
+    1: <%= form_for [@project, Task.new] do |f| %>
+    2:   <%= f.check_box :complete, onclick => "this.form.submit()" %>  
+    3:   <%= f.submit "update" %> |
+    4:   <%= task.name %>
+    5:   <%= link_to "(remove)", [@project, task], method: :delete, data: {confirm: "Are you sure?"} %>
+  
+app/views/tasks/_task.html.erb:2:in `block in _app_views_tasks__task_html_erb__137231578509686590_30473700'
+app/views/tasks/_task.html.erb:1:in `_app_views_tasks__task_html_erb__137231578509686590_30473700'
+app/views/projects/show.html.erb:13:in `block in _app_views_projects_show_html_erb__2943906137686858013_70133094304060'
+app/views/projects/show.html.erb:11:in `_app_views_projects_show_html_erb__2943906137686858013_70133094304060'
+Started GET "/projects/" for 127.0.0.1 at 2017-07-07 01:33:16 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 297ms (Views: 280.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 01:33:19 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (8.4ms)
+  Rendered tasks/_task.html.erb (0.9ms)
+  Rendered tasks/_task.html.erb (1.6ms)
+  Rendered projects/show.html.erb within layouts/application (68.9ms)
+Completed 200 OK in 122ms (Views: 112.9ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 01:33:21 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 12ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank):
+  
+app/controllers/tasks_controller.rb:29:in `create'
+Started PUT "/__web_console/repl_sessions/99b6d9962e2da9d8e12e7051dd647a93" for 127.0.0.1 at 2017-07-07 01:33:51 +0530
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 01:33:57 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 88ms (ActiveRecord: 4.0ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank):
+  
+app/controllers/tasks_controller.rb:29:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 01:34:05 +0530
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 265ms (Views: 262.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 01:34:07 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (13.5ms)
+  Rendered tasks/_task.html.erb (1.2ms)
+  Rendered tasks/_task.html.erb (1.1ms)
+  Rendered projects/show.html.erb within layouts/application (30.3ms)
+Completed 200 OK in 65ms (Views: 62.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 01:34:47 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (13.7ms)
+  Rendered tasks/_task.html.erb (1.8ms)
+  Rendered tasks/_task.html.erb (1.0ms)
+  Rendered projects/show.html.erb within layouts/application (82.9ms)
+Completed 200 OK in 493ms (Views: 454.0ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 01:34:50 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 10ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank):
+  
+app/controllers/tasks_controller.rb:29:in `create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_project_id' AND type='index'
+[0m
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 01:37:37 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 252ms (Views: 236.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 01:37:39 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (8.8ms)
+  Rendered tasks/_task.html.erb (1.8ms)
+  Rendered tasks/_task.html.erb (0.7ms)
+  Rendered projects/show.html.erb within layouts/application (65.3ms)
+Completed 200 OK in 107ms (Views: 97.0ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 01:37:41 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("project_id", "created_at", "updated_at", "complete") VALUES (?, ?, ?, ?)[0m  [["project_id", 7], ["created_at", "2017-07-06 20:07:41.142465"], ["updated_at", "2017-07-06 20:07:41.142465"], ["complete", "t"]]
+  [1m[35m (123.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/7
+Completed 302 Found in 140ms (ActiveRecord: 125.0ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 01:37:41 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (2.3ms)
+  Rendered tasks/_task.html.erb (1.1ms)
+  Rendered tasks/_task.html.erb (1.1ms)
+  Rendered tasks/_task.html.erb (1.6ms)
+  Rendered projects/show.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 58ms (Views: 55.1ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/projects/7/tasks/49" for 127.0.0.1 at 2017-07-07 01:37:49 +0530
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3nxD8Gld3sEtRVmehstT01xyssxXWgedbaeaXqd4hToSaF+MbEA0tAcfW84/Ld+s70T80Sy3Cy3G68FiUPaPow==", "project_id"=>"7", "id"=>"49"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 49], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["project_id", 7], ["id", 49], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 49]]
+  [1m[35m (86.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/7
+Completed 302 Found in 105ms (ActiveRecord: 89.3ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 01:37:49 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (4.9ms)
+  Rendered tasks/_task.html.erb (1.4ms)
+  Rendered tasks/_task.html.erb (0.7ms)
+  Rendered projects/show.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 65ms (Views: 61.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 01:38:14 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 59ms (ActiveRecord: 2.2ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank):
+  
+app/controllers/tasks_controller.rb:29:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 01:49:24 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 245ms (Views: 229.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 01:49:27 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (8.3ms)
+  Rendered tasks/_task.html.erb (0.8ms)
+  Rendered tasks/_task.html.erb (0.7ms)
+  Rendered projects/show.html.erb within layouts/application (64.5ms)
+Completed 200 OK in 98ms (Views: 90.0ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 01:49:28 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.2ms)
+
+
+  
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+NoMethodError (undefined method `complete' for #<Task::ActiveRecord_Associations_CollectionProxy:0x000000039f44f0>
+Did you mean?  compact):
+  
+app/controllers/tasks_controller.rb:30:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 01:53:55 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 250ms (Views: 233.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 01:53:57 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (13.6ms)
+  Rendered tasks/_task.html.erb (1.1ms)
+  Rendered tasks/_task.html.erb (1.0ms)
+  Rendered projects/show.html.erb within layouts/application (83.9ms)
+Completed 200 OK in 139ms (Views: 126.7ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 01:53:58 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/tasks_controller.rb:30:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 01:54:31 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 248ms (Views: 232.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 01:54:34 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (10.6ms)
+  Rendered tasks/_task.html.erb (1.2ms)
+  Rendered tasks/_task.html.erb (0.9ms)
+  Rendered projects/show.html.erb within layouts/application (67.6ms)
+Completed 200 OK in 107ms (Views: 96.4ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 01:54:35 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/tasks_controller.rb:30:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 01:58:11 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 254ms (Views: 229.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 01:58:12 +0530
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 01:58:13 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (10.8ms)
+  Rendered tasks/_task.html.erb (2.4ms)
+  Rendered tasks/_task.html.erb (0.9ms)
+  Rendered projects/show.html.erb within layouts/application (72.2ms)
+Completed 200 OK in 132ms (Views: 123.4ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 01:58:14 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.2ms)
+
+
+  
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+NoMethodError (undefined method `complete' for #<Task::ActiveRecord_Associations_CollectionProxy:0x007f9a542b1268>
+Did you mean?  compact):
+  
+app/controllers/tasks_controller.rb:30:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 01:58:58 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 255ms (Views: 237.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 01:59:00 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (12.7ms)
+  Rendered tasks/_task.html.erb (1.1ms)
+  Rendered tasks/_task.html.erb (1.0ms)
+  Rendered projects/show.html.erb within layouts/application (82.6ms)
+Completed 200 OK in 132ms (Views: 121.4ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 01:59:02 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 277ms (ActiveRecord: 0.2ms)
+
+
+  
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+NameError (undefined local variable or method `allowed_params' for #<TasksController:0x00000001e4daf8>):
+  
+app/controllers/tasks_controller.rb:31:in `create'
+Started GET "/project" for 127.0.0.1 at 2017-07-07 02:00:18 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/project"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 02:00:28 +0530
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 269ms (Views: 258.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 02:00:30 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (6.2ms)
+  Rendered tasks/_task.html.erb (1.7ms)
+  Rendered tasks/_task.html.erb (1.5ms)
+  Rendered projects/show.html.erb within layouts/application (85.0ms)
+Completed 200 OK in 128ms (Views: 120.3ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 02:00:32 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.3ms)
+
+
+  
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+NoMethodError (undefined method `update_attributes!' for #<Task::ActiveRecord_Associations_CollectionProxy:0x007fa0846af910>):
+  
+app/controllers/tasks_controller.rb:31:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 02:04:36 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 260ms (Views: 243.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 02:04:39 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (9.3ms)
+  Rendered tasks/_task.html.erb (0.7ms)
+  Rendered tasks/_task.html.erb (0.8ms)
+  Rendered projects/show.html.erb within layouts/application (63.9ms)
+Completed 200 OK in 102ms (Views: 93.4ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 02:04:40 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.8ms)
+
+
+  
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+NoMethodError (undefined method `update!' for #<Task::ActiveRecord_Associations_CollectionProxy:0x00000001e71750>
+Did you mean?  update):
+  
+app/controllers/tasks_controller.rb:31:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 02:07:40 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 251ms (Views: 234.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 02:07:43 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (14.6ms)
+  Rendered tasks/_task.html.erb (1.2ms)
+  Rendered tasks/_task.html.erb (1.2ms)
+  Rendered projects/show.html.erb within layouts/application (85.0ms)
+Completed 200 OK in 134ms (Views: 123.7ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 02:07:44 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 5ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task with 'id'=):
+  
+app/controllers/tasks_controller.rb:31:in `create'
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 02:09:04 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 2.2ms)
+
+
+  
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+NoMethodError (undefined method `update_attributes!' for #<Task::ActiveRecord_Associations_CollectionProxy:0x007fcddcfd0aa0>):
+  
+app/controllers/tasks_controller.rb:31:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 02:13:26 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 271ms (Views: 252.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 02:13:29 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (9.7ms)
+  Rendered tasks/_task.html.erb (0.8ms)
+  Rendered tasks/_task.html.erb (1.0ms)
+  Rendered projects/show.html.erb within layouts/application (69.7ms)
+Completed 200 OK in 104ms (Views: 96.1ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 02:13:30 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.2ms)
+
+
+  
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+NoMethodError (undefined method `update_attributes!' for #<Task::ActiveRecord_Associations_CollectionProxy:0x000000028b3e70>):
+  
+app/controllers/tasks_controller.rb:33:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 02:15:05 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 252ms (Views: 236.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 02:15:07 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (10.8ms)
+  Rendered tasks/_task.html.erb (1.4ms)
+  Rendered tasks/_task.html.erb (0.7ms)
+  Rendered projects/show.html.erb within layouts/application (64.8ms)
+Completed 200 OK in 108ms (Views: 97.8ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 02:15:08 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.3ms)
+
+
+  
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+NoMethodError (undefined method `update_all!' for #<Task::ActiveRecord_Associations_CollectionProxy:0x00000003f3db78>
+Did you mean?  update_all):
+  
+app/controllers/tasks_controller.rb:31:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 02:15:34 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 284ms (Views: 268.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 02:15:40 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (12.8ms)
+  Rendered tasks/_task.html.erb (1.8ms)
+  Rendered tasks/_task.html.erb (1.2ms)
+  Rendered projects/show.html.erb within layouts/application (81.7ms)
+Completed 200 OK in 128ms (Views: 119.2ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 02:15:41 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.3ms)
+
+
+  
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+NoMethodError (undefined method `update_attributes' for #<Task::ActiveRecord_Associations_CollectionProxy:0x000000022d2f60>
+Did you mean?  update_all):
+  
+app/controllers/tasks_controller.rb:31:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 02:16:05 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 254ms (Views: 236.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 02:16:08 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (9.4ms)
+  Rendered tasks/_task.html.erb (0.9ms)
+  Rendered tasks/_task.html.erb (0.9ms)
+  Rendered projects/show.html.erb within layouts/application (65.7ms)
+Completed 200 OK in 107ms (Views: 97.4ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 02:16:09 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+TypeError (no implicit conversion of ActionController::Parameters into String):
+  
+app/controllers/tasks_controller.rb:31:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 02:18:03 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 247ms (Views: 230.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 02:18:05 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (7.9ms)
+  Rendered tasks/_task.html.erb (0.8ms)
+  Rendered tasks/_task.html.erb (0.7ms)
+  Rendered projects/show.html.erb within layouts/application (60.5ms)
+Completed 200 OK in 91ms (Views: 82.7ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 02:18:06 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+TypeError (no implicit conversion of ActionController::Parameters into String):
+  
+app/controllers/tasks_controller.rb:31:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 02:21:33 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 250ms (Views: 231.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 02:21:36 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (9.4ms)
+  Rendered tasks/_task.html.erb (1.9ms)
+  Rendered tasks/_task.html.erb (0.8ms)
+  Rendered projects/show.html.erb within layouts/application (63.4ms)
+Completed 200 OK in 106ms (Views: 92.5ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 02:21:38 +0530
+  
+SyntaxError (/home/nikhil/Pr/DemoApp/app/controllers/tasks_controller.rb:40: syntax error, unexpected keyword_else, expecting keyword_end
+/home/nikhil/Pr/DemoApp/app/controllers/tasks_controller.rb:84: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/tasks_controller.rb:40: syntax error, unexpected keyword_else, expecting keyword_end
+app/controllers/tasks_controller.rb:84: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 02:28:29 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 263ms (Views: 247.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 02:28:31 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (9.4ms)
+  Rendered tasks/_task.html.erb (0.9ms)
+  Rendered tasks/_task.html.erb (0.8ms)
+  Rendered projects/show.html.erb within layouts/application (66.9ms)
+Completed 200 OK in 103ms (Views: 95.4ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 02:28:32 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.2ms)
+
+
+  
+TypeError (no implicit conversion of ActionController::Parameters into String):
+  
+app/controllers/tasks_controller.rb:31:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 02:30:28 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 254ms (Views: 237.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 02:30:31 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (8.0ms)
+  Rendered tasks/_task.html.erb (0.8ms)
+  Rendered tasks/_task.html.erb (0.8ms)
+  Rendered projects/show.html.erb within layouts/application (64.3ms)
+Completed 200 OK in 99ms (Views: 92.0ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 02:30:32 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1..2)):
+  
+app/controllers/tasks_controller.rb:31:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 02:31:18 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 312ms (Views: 296.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 02:31:20 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (8.9ms)
+  Rendered tasks/_task.html.erb (1.1ms)
+  Rendered tasks/_task.html.erb (1.4ms)
+  Rendered projects/show.html.erb within layouts/application (64.4ms)
+Completed 200 OK in 99ms (Views: 91.7ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 02:31:22 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "tasks" SET "complete" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["complete", "t"], ["updated_at", "2017-07-06 21:01:22.278725"], ["id", 45]]
+  [1m[35m (108.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "complete" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["complete", "t"], ["updated_at", "2017-07-06 21:01:22.394825"], ["id", 47]]
+  [1m[35m (94.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "complete" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["complete", "t"], ["updated_at", "2017-07-06 21:01:22.495937"], ["id", 48]]
+  [1m[35m (104.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/7
+Completed 302 Found in 352ms (ActiveRecord: 310.0ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 02:31:22 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (1.9ms)
+  Rendered tasks/_task.html.erb (1.3ms)
+  Rendered tasks/_task.html.erb (1.1ms)
+  Rendered projects/show.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 60ms (Views: 56.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 02:31:28 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/7
+Completed 302 Found in 15ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 02:31:28 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (3.5ms)
+  Rendered tasks/_task.html.erb (0.8ms)
+  Rendered tasks/_task.html.erb (1.0ms)
+  Rendered projects/show.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 60ms (Views: 57.0ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 02:31:29 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/7
+Completed 302 Found in 13ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 02:31:29 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (1.9ms)
+  Rendered tasks/_task.html.erb (0.7ms)
+  Rendered tasks/_task.html.erb (0.7ms)
+  Rendered projects/show.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 66ms (Views: 62.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 02:31:31 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/7
+Completed 302 Found in 13ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 02:31:31 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (1.8ms)
+  Rendered tasks/_task.html.erb (1.2ms)
+  Rendered tasks/_task.html.erb (0.8ms)
+  Rendered projects/show.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 46ms (Views: 42.4ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 02:31:50 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y5BtIUW2PvJYMN4EAqqW/QCdpV8ceNOnYCKtNRlvz3IHhHFdQKvUh3Jq3FS7TBqCs6vrQmeV3xfLbvYJ7uHF6w==", "task"=>{"name"=>"song"}, "project_id"=>"7"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "tasks" SET "name" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["name", "song"], ["updated_at", "2017-07-06 21:01:50.098159"], ["id", 45]]
+  [1m[35m (197.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "tasks" SET "name" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["name", "song"], ["updated_at", "2017-07-06 21:01:50.300326"], ["id", 47]]
+  [1m[35m (95.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "tasks" SET "name" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["name", "song"], ["updated_at", "2017-07-06 21:01:50.401701"], ["id", 48]]
+  [1m[35m (93.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/7
+Completed 302 Found in 408ms (ActiveRecord: 389.4ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 02:31:50 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (1.6ms)
+  Rendered tasks/_task.html.erb (0.7ms)
+  Rendered tasks/_task.html.erb (1.0ms)
+  Rendered projects/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 45ms (Views: 42.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 02:32:00 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9TZ5MaXYVoINVvF0XWPr0n4UUaM0DaJFhIRAXvusEXg5ImVNoMW89ycM8yTkhWetzSIfvk/grvUvyBtiDCIb4Q==", "task"=>{"name"=>"eat"}, "project_id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[33mUPDATE "tasks" SET "name" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["name", "eat"], ["updated_at", "2017-07-06 21:02:00.560217"], ["id", 45]]
+  [1m[35m (199.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "name" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["name", "eat"], ["updated_at", "2017-07-06 21:02:00.769511"], ["id", 47]]
+  [1m[35m (78.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "name" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["name", "eat"], ["updated_at", "2017-07-06 21:02:00.855387"], ["id", 48]]
+  [1m[35m (91.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/7
+Completed 302 Found in 397ms (ActiveRecord: 372.9ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 02:32:00 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (3.2ms)
+  Rendered tasks/_task.html.erb (1.1ms)
+  Rendered tasks/_task.html.erb (1.4ms)
+  Rendered projects/show.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 64ms (Views: 60.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 02:33:01 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 230ms (Views: 214.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 02:33:03 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (8.0ms)
+  Rendered tasks/_task.html.erb (0.8ms)
+  Rendered tasks/_task.html.erb (1.1ms)
+  Rendered projects/show.html.erb within layouts/application (62.6ms)
+Completed 200 OK in 96ms (Views: 86.2ms | ActiveRecord: 2.3ms)
+
+
+Started DELETE "/projects/7/tasks/45" for 127.0.0.1 at 2017-07-07 02:33:06 +0530
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"T/JHga4NPUFK3aTqM93ErsisNu5IVmBvZplDwWimtDWD5lv9qxDXNGCHprqKO0jRe5p48zO7bN/N1Rj9nyi+rA==", "project_id"=>"7", "id"=>"45"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["project_id", 7], ["id", 45], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 45]]
+  [1m[35m (104.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/7
+Completed 302 Found in 122ms (ActiveRecord: 107.5ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 02:33:06 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (2.6ms)
+  Rendered tasks/_task.html.erb (1.7ms)
+  Rendered projects/show.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 77ms (Views: 73.7ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/projects/7/tasks/47" for 127.0.0.1 at 2017-07-07 02:33:10 +0530
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6adhLUOCv9QbdqgYi0j52MMttIE4ec7+pfl37Lcr1EUls31RRp9VoTEsqkgyrnWncBv6nEOUwk4OtSzQQKXe3A==", "project_id"=>"7", "id"=>"47"}
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 47], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["project_id", 7], ["id", 47], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 47]]
+  [1m[35m (133.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/7
+Completed 302 Found in 146ms (ActiveRecord: 135.6ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 02:33:10 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (3.3ms)
+  Rendered projects/show.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 75ms (Views: 69.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 02:33:12 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 10ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank):
+  
+app/controllers/tasks_controller.rb:29:in `create'
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 02:33:23 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0cZjgOFeZES/iekQXdY+ThncvmtwJwhTYQP9xwdkG1Qd0n/85EOOMZXT60DkMLIxqurwdgvKBOPKT6b78OoRzQ==", "task"=>{"name"=>"ajaxify "}, "project_id"=>"7"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "ajaxify "], ["project_id", 7], ["created_at", "2017-07-06 21:03:23.844835"], ["updated_at", "2017-07-06 21:03:23.844835"]]
+  [1m[35m (161.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/7
+Completed 302 Found in 175ms (ActiveRecord: 163.9ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 02:33:24 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (3.5ms)
+  Rendered tasks/_task.html.erb (1.7ms)
+  Rendered projects/show.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 67ms (Views: 63.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 02:33:46 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 9ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank):
+  
+app/controllers/tasks_controller.rb:29:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 03:12:50 +0530
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 57ms (Views: 56.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 03:12:51 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (1.5ms)
+  Rendered tasks/_task.html.erb (1.1ms)
+  Rendered projects/show.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 46ms (Views: 42.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 03:12:55 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank):
+  
+app/controllers/tasks_controller.rb:29:in `create'
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:13:02 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:13:17 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:14:15 +0530
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:14:24 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:14:35 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:14:42 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:14:45 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:14:50 +0530
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:15:00 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:15:07 +0530
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:15:47 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:15:48 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:16:11 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:16:22 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:17:03 +0530
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:17:37 +0530
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:17:59 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:18:03 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:18:28 +0530
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:25:40 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:25:57 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:26:12 +0530
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:26:26 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:26:27 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:26:33 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:26:34 +0530
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:26:49 +0530
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:27:00 +0530
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:27:18 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:27:29 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:27:41 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:27:50 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:28:15 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:28:29 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:28:36 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:28:36 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:28:44 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:28:46 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:28:58 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:29:04 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:29:20 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:29:27 +0530
+Started PUT "/__web_console/repl_sessions/554ebe400bf6703662b3e8e8224f6319" for 127.0.0.1 at 2017-07-07 03:29:30 +0530
+Started GET "/projects/6" for 127.0.0.1 at 2017-07-07 19:42:27 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 404 Not Found in 23ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=6):
+  
+app/controllers/projects_controller.rb:67:in `set_project'
+Started GET "/projects/" for 127.0.0.1 at 2017-07-07 19:42:32 +0530
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 979ms (Views: 932.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 19:42:35 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (8.1ms)
+  Rendered tasks/_task.html.erb (0.8ms)
+  Rendered projects/show.html.erb within layouts/application (98.6ms)
+Completed 200 OK in 140ms (Views: 123.0ms | ActiveRecord: 2.9ms)
+
+
+Started DELETE "/projects/7/tasks/50" for 127.0.0.1 at 2017-07-07 19:42:43 +0530
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"M/5fhXEkUPD5egCoYNatAZcxpaIh/XoWy1rQvhw+cPxll0pmp/PLeojNqfP0Ya+BFlQSDLumhN+SiCXIR3srxw==", "project_id"=>"7", "id"=>"50"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 50], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["project_id", 7], ["id", 50], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 50]]
+  [1m[35m (91.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/7
+Completed 302 Found in 106ms (ActiveRecord: 93.5ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 19:42:43 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (1.7ms)
+  Rendered projects/show.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 49ms (Views: 43.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 19:58:36 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 248ms (Views: 231.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 19:58:39 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (13.2ms)
+  Rendered projects/show.html.erb within layouts/application (84.5ms)
+Completed 200 OK in 133ms (Views: 123.1ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 19:58:46 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G1TCCDvSucqBQTF9a/fviLGl58nxHM5VX+SWGMxRcfLzE28H+zQe8ulHL3y162/TWnY3ZEvpJnVed4Ll/uTD7w==", "task"=>{"name"=>"ajaxify "}, "project_id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 388ms (ActiveRecord: 0.3ms)
+
+
+  
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+NameError (undefined local variable or method `tasks' for #<TasksController:0x000000022d65c0>
+Did you mean?  @task):
+  
+app/controllers/tasks_controller.rb:30:in `create'
+Started GET "/projects/" for 127.0.0.1 at 2017-07-07 20:00:51 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 292ms (Views: 274.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 20:00:52 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (10.6ms)
+  Rendered projects/show.html.erb within layouts/application (61.1ms)
+Completed 200 OK in 101ms (Views: 90.4ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 20:00:56 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bj3Gx3sKGl5rEUyrRgD8hpN+0MR97cdY8tx48p7PykXuemvIu+y9ZgMXUqqYHHzdeK0AaccYL3jzT2wPrHp4WA==", "task"=>{"name"=>"ajax"}, "project_id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 272ms (ActiveRecord: 0.2ms)
+
+
+  
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+NameError (undefined local variable or method `task' for #<TasksController:0x00000002561998>
+Did you mean?  @task):
+  
+app/controllers/tasks_controller.rb:30:in `create'
+Started GET "/projects/" for 127.0.0.1 at 2017-07-07 20:02:12 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 260ms (Views: 236.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 20:02:20 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (8.8ms)
+  Rendered projects/show.html.erb within layouts/application (62.9ms)
+Completed 200 OK in 98ms (Views: 89.8ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 20:02:26 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B9Cb4H77MYAHyN8pH5aSXfI8t6I1m6h4MGkd5uat/Pnvlzbvvh2WuG/OwSjBihIGGe9nD49uQFgx+gkb1BhO5A==", "task"=>{"name"=>"ajax"}, "project_id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms)
+
+
+  
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+NoMethodError (undefined method `complete' for #<Task::ActiveRecord_Associations_CollectionProxy:0x00000002cb7c38>
+Did you mean?  compact):
+  
+app/controllers/tasks_controller.rb:30:in `create'
+Started GET "/projects/" for 127.0.0.1 at 2017-07-07 20:03:36 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (16.7ms)
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 20:03:37 +0530
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 89ms (Views: 86.6ms | ActiveRecord: 0.5ms)
+
+
+Completed 200 OK in 407ms (Views: 381.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 20:03:39 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (15.3ms)
+  Rendered projects/show.html.erb within layouts/application (82.8ms)
+Completed 200 OK in 127ms (Views: 117.9ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 20:03:44 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wV1cYj97kGq2wLulV8hRwGr8nijsEIMcSs74f5SQ2VQpGvFt/503Ut7GpaSJ1NGbgS9OhVblazxLXeyCpiVrSQ==", "task"=>{"name"=>"kacha "}, "project_id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "kacha "], ["project_id", 7], ["created_at", "2017-07-07 14:33:44.757401"], ["updated_at", "2017-07-07 14:33:44.757401"]]
+  [1m[35m (191.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/7
+Completed 302 Found in 205ms (ActiveRecord: 193.9ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 20:03:44 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (2.8ms)
+  Rendered tasks/_task.html.erb (1.9ms)
+  Rendered projects/show.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 57ms (Views: 53.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 20:03:51 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 12ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank):
+  
+app/controllers/tasks_controller.rb:34:in `create'
+Started GET "/projects/" for 127.0.0.1 at 2017-07-07 20:07:23 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 274ms (Views: 255.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 20:07:24 +0530
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 32ms (Views: 28.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 20:07:25 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (12.4ms)
+  Rendered tasks/_task.html.erb (1.3ms)
+  Rendered projects/show.html.erb within layouts/application (91.1ms)
+Completed 200 OK in 166ms (Views: 156.7ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 20:07:27 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms)
+
+
+  
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+NoMethodError (undefined method `complete' for #<Task::ActiveRecord_Associations_CollectionProxy:0x007f31781e5978>
+Did you mean?  compact):
+  
+app/controllers/tasks_controller.rb:30:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 20:13:08 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 275ms (Views: 251.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 20:13:10 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (9.5ms)
+  Rendered tasks/_task.html.erb (1.8ms)
+  Rendered projects/show.html.erb within layouts/application (65.6ms)
+Completed 200 OK in 104ms (Views: 94.5ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 20:13:12 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 277ms (ActiveRecord: 0.2ms)
+
+
+  
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+NameError (undefined local variable or method `complete' for #<TasksController:0x00000003788a68>
+Did you mean?  compare_with_real_token
+               Complex):
+  
+app/controllers/tasks_controller.rb:30:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 20:13:40 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 275ms (Views: 251.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 20:13:43 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (13.0ms)
+  Rendered tasks/_task.html.erb (1.1ms)
+  Rendered projects/show.html.erb within layouts/application (88.1ms)
+Completed 200 OK in 137ms (Views: 125.9ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 20:13:44 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/tasks_controller.rb:30:in `create'
+Started GET "/projects/" for 127.0.0.1 at 2017-07-07 20:14:13 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 251ms (Views: 233.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 20:14:16 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (9.3ms)
+  Rendered tasks/_task.html.erb (1.0ms)
+  Rendered projects/show.html.erb within layouts/application (65.3ms)
+Completed 200 OK in 103ms (Views: 93.1ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 20:14:18 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/tasks_controller.rb:30:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 20:15:12 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 250ms (Views: 232.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 20:15:14 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (13.3ms)
+  Rendered tasks/_task.html.erb (1.2ms)
+  Rendered projects/show.html.erb within layouts/application (90.3ms)
+Completed 200 OK in 143ms (Views: 129.6ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 20:15:15 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.2ms)
+
+
+  
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+NoMethodError (undefined method `call' for #<Task::ActiveRecord_Associations_CollectionProxy:0x00000002de1c58>
+Did you mean?  caller):
+  
+app/controllers/tasks_controller.rb:30:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 20:47:50 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 307ms (Views: 288.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 20:47:52 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (12.2ms)
+  Rendered tasks/_task.html.erb (0.9ms)
+  Rendered projects/show.html.erb within layouts/application (85.5ms)
+Completed 200 OK in 134ms (Views: 120.5ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 20:47:53 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.2ms)
+
+
+  
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+NoMethodError (undefined method `call' for #<Task::ActiveRecord_Associations_CollectionProxy:0x000000034a2f60>
+Did you mean?  caller):
+  
+app/controllers/tasks_controller.rb:30:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 20:48:16 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 383ms (Views: 360.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 20:48:18 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (12.5ms)
+  Rendered tasks/_task.html.erb (1.0ms)
+  Rendered projects/show.html.erb within layouts/application (69.3ms)
+Completed 200 OK in 106ms (Views: 98.0ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 20:48:20 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 290ms (ActiveRecord: 0.2ms)
+
+
+  
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? LIMIT ?[0m  [["project_id", 7], ["LIMIT", 11]]
+NameError (undefined local variable or method `tasks' for #<TasksController:0x0000000347b140>
+Did you mean?  @task):
+  
+app/controllers/tasks_controller.rb:30:in `create'
+Started GET "/projects/" for 127.0.0.1 at 2017-07-07 20:49:11 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 297ms (Views: 268.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 20:49:12 +0530
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 38ms (Views: 34.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 20:49:14 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (13.8ms)
+  Rendered tasks/_task.html.erb (1.3ms)
+  Rendered projects/show.html.erb within layouts/application (94.5ms)
+Completed 200 OK in 169ms (Views: 162.0ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 20:49:16 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 404 Not Found in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tasks_controller.rb:30:in `create'
+Started GET "/projects/" for 127.0.0.1 at 2017-07-07 20:50:59 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 297ms (Views: 282.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 20:51:00 +0530
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 20:51:04 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (11.7ms)
+  Rendered tasks/_task.html.erb (0.9ms)
+  Rendered projects/show.html.erb within layouts/application (76.7ms)
+Completed 200 OK in 135ms (Views: 126.6ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 20:51:05 +0530
+  
+SyntaxError (/home/nikhil/Pr/DemoApp/app/controllers/tasks_controller.rb:30: syntax error, unexpected ')', expecting ']'
+    if @task.find.(params[:id) == true
+                              ^
+/home/nikhil/Pr/DemoApp/app/controllers/tasks_controller.rb:78: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/tasks_controller.rb:30: syntax error, unexpected ')', expecting ']'
+app/controllers/tasks_controller.rb:78: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/projects/" for 127.0.0.1 at 2017-07-07 20:52:10 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 242ms (Views: 220.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 20:54:08 +0530
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 20:54:11 +0530
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 20:54:14 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (15.7ms)
+  Rendered tasks/_task.html.erb (0.9ms)
+  Rendered projects/show.html.erb within layouts/application (97.2ms)
+Completed 200 OK in 141ms (Views: 131.6ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 20:54:15 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 404 Not Found in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tasks_controller.rb:30:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 20:55:31 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 295ms (Views: 276.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 20:55:33 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (10.5ms)
+  Rendered tasks/_task.html.erb (1.0ms)
+  Rendered projects/show.html.erb within layouts/application (63.0ms)
+Completed 200 OK in 98ms (Views: 89.2ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 20:55:34 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+Completed 404 Not Found in 10ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tasks_controller.rb:31:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 20:58:25 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 285ms (Views: 267.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 20:58:28 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (8.1ms)
+  Rendered tasks/_task.html.erb (1.4ms)
+  Rendered projects/show.html.erb within layouts/application (59.4ms)
+Completed 200 OK in 97ms (Views: 87.0ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 20:58:30 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+Completed 404 Not Found in 7ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tasks_controller.rb:32:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-07 20:59:14 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 275ms (Views: 257.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-07 20:59:16 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (11.3ms)
+  Rendered tasks/_task.html.erb (1.0ms)
+  Rendered projects/show.html.erb within layouts/application (66.8ms)
+Completed 200 OK in 104ms (Views: 95.8ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 20:59:17 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+Completed 404 Not Found in 11ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tasks_controller.rb:32:in `create'
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 23:38:49 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"0"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+Completed 404 Not Found in 48ms (ActiveRecord: 3.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tasks_controller.rb:32:in `create'
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 23:38:50 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+Completed 404 Not Found in 8ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tasks_controller.rb:32:in `create'
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-07 23:40:10 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"0"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+Completed 404 Not Found in 7ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tasks_controller.rb:32:in `create'
+Started GET "/projects/" for 127.0.0.1 at 2017-07-08 00:48:45 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (15.3ms)
+Started GET "/projects" for 127.0.0.1 at 2017-07-08 00:48:46 +0530
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 576ms (Views: 552.7ms | ActiveRecord: 1.4ms)
+
+
+Completed 200 OK in 246ms (Views: 244.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-08 00:48:48 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (13.2ms)
+  Rendered tasks/_task.html.erb (0.7ms)
+  Rendered projects/show.html.erb within layouts/application (117.3ms)
+Completed 200 OK in 160ms (Views: 153.2ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-08 00:48:49 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+Completed 500 Internal Server Error in 308ms (ActiveRecord: 0.7ms)
+
+
+  
+NameError (undefined local variable or method `task' for #<TasksController:0x007fb80c642460>
+Did you mean?  @task):
+  
+app/controllers/tasks_controller.rb:32:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-08 00:50:15 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 258ms (Views: 241.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-08 00:50:18 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (11.8ms)
+  Rendered tasks/_task.html.erb (0.7ms)
+  Rendered projects/show.html.erb within layouts/application (62.5ms)
+Completed 200 OK in 103ms (Views: 92.9ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-08 00:50:19 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" IN (NULL, NULL)[0m
+Completed 404 Not Found in 11ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find all Tasks with 'id': (all, {:conditions=>"complete IS NOT FALSE"}) (found 0 results, but was looking for 2)):
+  
+app/controllers/tasks_controller.rb:32:in `create'
+Started GET "/projects/" for 127.0.0.1 at 2017-07-08 00:51:04 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 259ms (Views: 242.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-08 00:51:06 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (14.2ms)
+  Rendered tasks/_task.html.erb (1.2ms)
+  Rendered projects/show.html.erb within layouts/application (80.8ms)
+Completed 200 OK in 113ms (Views: 105.1ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-08 00:51:07 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" IN (NULL, NULL)[0m
+Completed 404 Not Found in 9ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find all Tasks with 'id': (all, {:conditions=>"complete IS NOT false"}) (found 0 results, but was looking for 2)):
+  
+app/controllers/tasks_controller.rb:32:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-08 00:51:47 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 260ms (Views: 243.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-08 00:51:49 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (11.8ms)
+  Rendered tasks/_task.html.erb (0.8ms)
+  Rendered projects/show.html.erb within layouts/application (63.0ms)
+Completed 200 OK in 97ms (Views: 88.9ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-08 00:51:51 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" IN (NULL, NULL)[0m
+Completed 404 Not Found in 9ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find all Tasks with 'id': (all, {:conditions=>"complete: true"}) (found 0 results, but was looking for 2)):
+  
+app/controllers/tasks_controller.rb:32:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-10 01:20:25 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 864ms (Views: 843.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-10 01:20:26 +0530
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-10 01:20:28 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  Rendered tasks/_task.html.erb (37.5ms)
+  Rendered tasks/_task.html.erb (0.6ms)
+  Rendered projects/show.html.erb within layouts/application (142.6ms)
+Completed 200 OK in 190ms (Views: 172.3ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-10 01:20:29 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" IN (NULL, NULL)[0m
+Completed 404 Not Found in 7ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find all Tasks with 'id': (all, {:conditions=>"complete: true"}) (found 0 results, but was looking for 2)):
+  
+app/controllers/tasks_controller.rb:32:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-07-10 01:26:43 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (9.5ms)
+Started GET "/projects" for 127.0.0.1 at 2017-07-10 01:26:44 +0530
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 1476ms (Views: 1461.4ms | ActiveRecord: 1.2ms)
+
+
+Completed 200 OK in 109ms (Views: 104.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-10 01:26:46 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (215.7ms)
+Completed 500 Internal Server Error in 232ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `tasks_path' for #<#<Class:0x007f2308922340>:0x00000003a80860>
+Did you mean?  asset_path):
+    1: <h1><%= @project.name %></h1>
+    2: 
+    3: <div id="project">
+    4:   <%= form_for @project.tasks.build do |f| %>
+    5:     <%= f.hidden_field :project_id %>
+    6:     <%= f.text_field :name %>
+    7:     <%= f.submit %>
+  
+app/views/projects/show.html.erb:4:in `_app_views_projects_show_html_erb__4160181807294920506_30677760'
+Started GET "/projects" for 127.0.0.1 at 2017-07-10 01:29:09 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 203ms (Views: 188.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-10 01:29:12 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (162.4ms)
+Completed 500 Internal Server Error in 176ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `tasks_path' for #<#<Class:0x007ff5f4e66e68>:0x007ff5f4c6f0d8>
+Did you mean?  asset_path):
+    1: <h1><%= @project.name %></h1>
+    2: 
+    3: <div id="project">
+    4:   <%= form_for @project.tasks.build do |f| %>
+    5:     <%= f.hidden_field :project_id %>
+    6:     <%= f.text_field :name %>
+    7:     <%= f.submit %>
+  
+app/views/projects/show.html.erb:4:in `_app_views_projects_show_html_erb___1809622447721192986_70347175198200'
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-10 01:30:34 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.9ms)
+
+
+  
+SyntaxError (/home/nikhil/Pr/DemoApp/app/views/projects/show.html.erb:4: syntax error, unexpected keyword_do_block
+...rm_for [@project, Task.new], do |f| @output_buffer.safe_appe...
+...                               ^
+/home/nikhil/Pr/DemoApp/app/views/projects/show.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/projects/show.html.erb:4: syntax error, unexpected keyword_do_block
+app/views/projects/show.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/projects/" for 127.0.0.1 at 2017-07-10 01:30:37 +0530
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 283ms (Views: 280.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-10 01:30:38 +0530
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 39ms (Views: 37.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-10 01:30:40 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/home/nikhil/Pr/DemoApp/app/views/projects/show.html.erb:4: syntax error, unexpected keyword_do_block
+...rm_for [@project, Task.new], do |f| @output_buffer.safe_appe...
+...                               ^
+/home/nikhil/Pr/DemoApp/app/views/projects/show.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/projects/show.html.erb:4: syntax error, unexpected keyword_do_block
+app/views/projects/show.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/projects" for 127.0.0.1 at 2017-07-10 01:32:32 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 200ms (Views: 185.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-10 01:32:35 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."complete" = ?[0m  [["project_id", 7], ["complete", "f"]]
+  Rendered collection of tasks/_task.html.erb [1 times] (3.0ms)
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."complete" = ?[0m  [["project_id", 7], ["complete", "t"]]
+  Rendered collection of tasks/_task.html.erb [1 times] (0.8ms)
+  Rendered projects/show.html.erb within layouts/application (54.4ms)
+Completed 200 OK in 93ms (Views: 80.1ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/projects/7/tasks" for 127.0.0.1 at 2017-07-10 01:32:59 +0530
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1OfWLclD399ox9bwJbp8B+wgBO2S5+uw3wHeJOlbn5D/f3qk07qU3T+/tdcbsITe8PolXIey/HU8ShgvSBydGA==", "task"=>{"project_id"=>"", "name"=>"ajax"}, "commit"=>"Create Task", "project_id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Unpermitted parameter: :project_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "ajax"], ["project_id", 7], ["created_at", "2017-07-09 20:02:59.984885"], ["updated_at", "2017-07-09 20:02:59.984885"]]
+  [1m[35m (120.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/7
+Completed 302 Found in 132ms (ActiveRecord: 121.5ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-10 01:33:00 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."complete" = ?[0m  [["project_id", 7], ["complete", "f"]]
+  Rendered collection of tasks/_task.html.erb [2 times] (4.2ms)
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."complete" = ?[0m  [["project_id", 7], ["complete", "t"]]
+  Rendered collection of tasks/_task.html.erb [1 times] (1.6ms)
+  Rendered projects/show.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 56ms (Views: 51.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-10 01:33:04 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."complete" = ?[0m  [["project_id", 7], ["complete", "f"]]
+  Rendered collection of tasks/_task.html.erb [2 times] (3.8ms)
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."complete" = ?[0m  [["project_id", 7], ["complete", "t"]]
+  Rendered collection of tasks/_task.html.erb [1 times] (1.8ms)
+  Rendered projects/show.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 51ms (Views: 46.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-07-10 01:34:46 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."complete" = ?[0m  [["project_id", 7], ["complete", "f"]]
+  Rendered collection of tasks/_task.html.erb [2 times] (2.5ms)
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."complete" = ?[0m  [["project_id", 7], ["complete", "t"]]
+  Rendered collection of tasks/_task.html.erb [1 times] (0.6ms)
+  Rendered projects/show.html.erb within layouts/application (40.8ms)
+Completed 200 OK in 249ms (Views: 225.4ms | ActiveRecord: 1.8ms)
+
+

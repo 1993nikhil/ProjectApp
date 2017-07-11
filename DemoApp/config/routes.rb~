@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resources :tasks 
   end
 
-  #root to: 'prijects#index'
+  root to: 'sessions#new'
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
   post '/users' => 'users#create'  
  
+  #Rails.application.routes.default_url_options[:host] =  'sessions#new'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

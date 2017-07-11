@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: [:show, :edit, :update, :destroy]
+  before_action :set_project  
+  
 
   # GET /tasks
   # GET /tasks.json
@@ -15,7 +16,7 @@ class TasksController < ApplicationController
 
   # GET /tasks/new
   def new
-    @task = Task.new
+    @task = @project.tasks.new
   end
 
   # GET /tasks/1/edit
@@ -27,8 +28,6 @@ class TasksController < ApplicationController
   def create
     @project = Project.find(params[:project_id])
     @task    = @project.tasks.create!(task_params) 
-   
-    
     respond_to do |f|
       f.html { redirect_to @project, notice: 'task created' }
       f.js
@@ -43,10 +42,10 @@ class TasksController < ApplicationController
     respond_to do |format|
       if @task.update(task_params)
         format.html { redirect_to @project, notice: 'Task was successfully updated.' }
-        format.json { render :show, status: :ok, location: @project }
+        format.js
       else
         format.html { render :edit }
-        format.json { render json: @task.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
@@ -57,11 +56,19 @@ class TasksController < ApplicationController
     @project = Project.find(params[:project_id])
     @task = @project.tasks.find(params[:id])
     @task.destroy
-    redirect_to @project, :notice => "Task Deleted"  
+      
+    respond_to do |f|
+      f.html { redirect_to @project, :notice => "Task Deleted" }
+      f.js
+    end 
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def set_project
+      @project = Project.find(params[:project_id])
+    end
+
     def set_task
       @task = Task.find(params[:id])
     end
@@ -70,4 +77,5 @@ class TasksController < ApplicationController
     def task_params
       params.require(:task).permit(:name, :complete)
     end
+
 end

@@ -16,12 +16,3 @@
 //= require jquery_ujs
 
 
-
-
-
-
-
-
-
-
-

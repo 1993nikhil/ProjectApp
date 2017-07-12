@@ -22899,3 +22899,87 @@ Processing by ProjectsController#show as HTML
 Completed 200 OK in 132ms (Views: 115.7ms | ActiveRecord: 4.9ms)
 
 
+Started GET "/projects" for 127.0.0.1 at 2017-07-12 12:13:34 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (27.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 842ms (Views: 800.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/projects/9" for 127.0.0.1 at 2017-07-12 12:13:37 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."complete" = ?[0m  [["project_id", 9], ["complete", "f"]]
+  Rendered collection of tasks/_task.html.erb [4 times] (13.3ms)
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."complete" = ?[0m  [["project_id", 9], ["complete", "t"]]
+  Rendered collection of tasks/_task.html.erb [4 times] (6.0ms)
+  Rendered projects/show.html.erb within layouts/application (166.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 216ms (Views: 200.2ms | ActiveRecord: 2.6ms)
+
+
+Started PATCH "/projects/9/tasks/77" for 127.0.0.1 at 2017-07-12 12:13:39 +0530
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"1"}, "project_id"=>"9", "id"=>"77"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 77], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (10.6ms)[0m  [1m[33mUPDATE "tasks" SET "complete" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["complete", "t"], ["updated_at", "2017-07-12 06:43:39.158274"], ["id", 77]]
+  [1m[35m (104.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/9
+Completed 302 Found in 135ms (ActiveRecord: 116.1ms)
+
+
+Started GET "/projects/9" for 127.0.0.1 at 2017-07-12 12:13:39 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."complete" = ?[0m  [["project_id", 9], ["complete", "f"]]
+  Rendered collection of tasks/_task.html.erb [3 times] (7.1ms)
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."complete" = ?[0m  [["project_id", 9], ["complete", "t"]]
+  Rendered collection of tasks/_task.html.erb [5 times] (4.6ms)
+  Rendered projects/show.html.erb within layouts/application (26.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 64ms (Views: 58.5ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/projects/9/tasks/79" for 127.0.0.1 at 2017-07-12 12:13:40 +0530
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"complete"=>"0"}, "project_id"=>"9", "id"=>"79"}
+Can't verify CSRF token authenticity.
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 79], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "complete" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["complete", "f"], ["updated_at", "2017-07-12 06:43:40.962898"], ["id", 79]]
+  [1m[35m (106.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/9
+Completed 302 Found in 129ms (ActiveRecord: 108.9ms)
+
+
+Started GET "/projects/9" for 127.0.0.1 at 2017-07-12 12:13:41 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."complete" = ?[0m  [["project_id", 9], ["complete", "f"]]
+  Rendered collection of tasks/_task.html.erb [4 times] (6.2ms)
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."complete" = ?[0m  [["project_id", 9], ["complete", "t"]]
+  Rendered collection of tasks/_task.html.erb [4 times] (3.9ms)
+  Rendered projects/show.html.erb within layouts/application (24.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 66.5ms | ActiveRecord: 1.1ms)
+
+
